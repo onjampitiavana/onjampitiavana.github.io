@@ -3,8 +3,8 @@
 Welcome to my personal portfolio website.
 
 A modern and interactive portfolio built with React, featuring two different experiences:
-- 🖥️ Console Mode
-- 🌐 Interface Mode
+- </> Console Mode
+- !</> Interface Mode
 
 ## About
 
