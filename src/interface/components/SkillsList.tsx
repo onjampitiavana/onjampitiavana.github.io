@@ -1,6 +1,6 @@
 type skill = {
-    name?: string;
     image?: string;
+    classname?:string;
 }
 type SkillsListProps = {
     title?: string;
@@ -9,13 +9,12 @@ type SkillsListProps = {
 
 const SkillsList: React.FC<SkillsListProps> = ({ title, skills }) => {
     return (
-        <div>
+        <div className="mt-5">
             <h3>{title}</h3>
-            <ul className="flex gap-4">
+            <ul className="grid grid-cols-3 md:flex gap-3 md:gap-8 items-center">
                 {
-                    skills.map((skill) => (
-                        <li key={skill.name}><img src={skill.image} alt={skill.name} className="w-30 ml-2"/>
-                            <span className="font-semibold">{skill.name}</span></li>
+                    skills.map((skill,index) => (
+                        <li key={index} className="md:w-auto" ><img src={skill.image} alt="skill" className={skill.classname}/></li>
                     ))
                 }
             </ul>

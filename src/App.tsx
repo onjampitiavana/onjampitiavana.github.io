@@ -6,7 +6,8 @@ import Section from './interface/pages/Section';
 import Virus from './interface/pages/Virus.js';
 function App() {
   return ( 
-    <StrictMode>
+    <div className='bg-amber-50'>
+      <StrictMode>
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Virus/>}></Route>
@@ -16,6 +17,7 @@ function App() {
       </Routes>
       </BrowserRouter>
     </StrictMode>
+    </div>
    );
 }
 

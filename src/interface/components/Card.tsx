@@ -15,20 +15,20 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({title, description, icon,image, style, type, buttonStyle,year,yearStyle})=>{
     return(
         <div className={style}>
-            <div className="flex-row">
+            <div className="">
                 <div className="flex items-center gap-2 mb-2">
                 {icon && <span className="text-xl">{icon}</span>}
-                <h3 className="text-lg font-bold flex gap-2 items-center">  {image && (
+                <h3 className="md:text-xl font-bold flex gap-2 items-center">  {image && (
                 <img src={image} alt={title}
                 className="w-15 rounded-4xl"/>
             )} {title}</h3>
             </div>
-            <div>
-                <button className={buttonStyle}>{type}</button>
+            <p>{description}</p>
+            <div className="flex items-center gap-4">
+            <div><button className={buttonStyle}>{type}</button></div>
+            <div><p className="italic">{year}</p></div>
             </div>
             </div>
-            {description && <p className=" leading-relaxed">{description}</p>}
-            <p className={yearStyle}>{year}</p>
         </div>
     )
 }

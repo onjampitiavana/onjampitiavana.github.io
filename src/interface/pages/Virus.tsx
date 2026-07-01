@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import sound from "../sound/virus.wav";
+import sound from "../../../public/virus.wav";
 export default function Virus() {
   const [alert, setAlert] = useState<string>("");
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ export default function Virus() {
   }, [navigate]);
 
   return (
-    <div className="h-screen w-full flex items-center justify-center bg-black">
+    <div className="h-screen w-full flex items-center text-center justify-center bg-black">
       <div className="font-mono text-green-400 text-lg">
         {alert}
         <span className="animate-pulse">▌</span>
