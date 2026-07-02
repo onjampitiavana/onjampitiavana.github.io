@@ -4,6 +4,7 @@ import { MdClose, MdLanguage, MdMenu, MdWbSunny } from "react-icons/md";
 import { FiActivity, FiHome, FiMoon } from "react-icons/fi";
 import { BsFilePerson } from "react-icons/bs";
 import { AiFillProject } from "react-icons/ai";
+import Reveal from "./Reveal";
 
 function Header() {
   const [dark, setDark] = useState(() => {
@@ -42,14 +43,20 @@ function Header() {
         </button>
         <button onClick={()=>setOpen(!open)}>{open ? <MdClose size={28}/> : <MdMenu size={28}/>}</button>
       </div>
-      {open &&(<div className="absolute top-16 left-0 w-75 bg-gray-100 shadow-md flex flex-col gap-5 h-screen md:hidden">
-        <button onClick={()=>scrollTo("home")} className="text-left ml-8 mt-8 flex items-center gap-1"> <FiHome size={15}/> <span>Home</span> </button>
+      {open &&(
+        <div className="absolute flex top-8 w-75 left-0 flex-col gap-5 h-screen md:hidden">
+            <Reveal direction="top">
+              <div className="bg-gray-400 shadow-amber-100 h-screen">
+                    <button onClick={()=>scrollTo("home")} className="text-left ml-8 mt-8 flex items-center gap-1"> <FiHome size={15}/> <span>Home</span> </button>
         <button onClick={()=>scrollTo("about")} className="text-left ml-8 gap-1 flex items-center"><BsFilePerson size={15}/> <span>About</span> </button>
         <button onClick={()=>scrollTo("career")} className="text-left ml-8 flex items-center gap-1 "><FiActivity size={15}/>  <span>Career</span> </button>
         <button onClick={()=>scrollTo("project")} className="text-left ml-8 flex items-center gap-1"> <AiFillProject size={15}/> <span>Projects</span> </button>
-
-      </div>)}
+              </div>
+        </Reveal>
+      </div>
+    )}
     </header>
   );
 }
 export default Header;
+

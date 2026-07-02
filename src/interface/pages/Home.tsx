@@ -1,17 +1,23 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import onja from "../../assets/onja.png"
 import { FaDownload } from "react-icons/fa6";
+import Reveal from "../components/Reveal";
 function Home() {
 
     return (
         <div className="flex flex-col md:flex-row items-center md:gap-50">
-                <div id="home" className="mt-4 md:mt-0 order-2 md:order-1">
-                <h1 className="text-left md:text-2xl text-[var(--bg)]"><span className="md:text-2xl font-semibold">Hi, I’m</span><span className="font-bold text-xl md:text-2xl">  ONJAMPITIAVANA </span><br />
+                
+                    <div id="home" className="mt-3 md:-mt-5 order-2 md:order-1">
+               <Reveal direction="left">
+                 <h1 className="text-left md:text-2xl text-[var(--bg)]"><span className="md:text-2xl font-semibold">Hi, I’m</span><span className="font-bold text-xl md:text-2xl">  ONJAMPITIAVANA </span><br />
                     <p className="font-semibold md:text-2xl text-left">Full-stack developer<br />focused on backend and system design.</p></h1>
+               </Reveal>
             </div>
-            <div className="ml-4 order-1 md:order-2 ">
-                <img src={onja} alt="onja" className="w-70 h-70 md:h-100 md:w-100 object-cover" />
-                <div className=" ml-20 mt-3 md:ml-30">
+              
+                <div className="-mt-25 md:-mt-35 order-1 md:order-2 ">
+            <Reveal direction="right" delay={0.2}>
+                <img src={onja} alt="onja" className="w-70 h-70 md:h-120 md:w-120 " />
+                <div className=" ml-20 mt-3 md:ml-36">
                     <div className="flex items-center gap-4 md:gap-8">
                         <a href="mailto:onjampitiavanasantatriniaina@gmail.com"><FaEnvelope /></a>
                         <a href="https://github.com/onjampitiavana" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
@@ -24,6 +30,7 @@ function Home() {
                         </a>
                     </div>
                 </div>
+            </Reveal>
             </div> 
         </div>
     );

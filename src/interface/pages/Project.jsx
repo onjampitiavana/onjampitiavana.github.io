@@ -2,6 +2,7 @@ import portfolio from "../../assets/portfolio.png"
 function Project() {
     return ( 
         <div className="mt-8">
+            <h2 className="text-2xl md:text-3xl font-stretch-50%l">Where ideas turn into real applications.</h2>
             <div>
                 <p>Arovy</p>
             <div className="mt-8 w-80 bg-amber-700 h-90 rounded-lg">
@@ -25,15 +26,16 @@ function Project() {
                 </h2>
                </div>
                </div>
-               <div className="mt-5">
-                <p className="text-center">@ developed with heart by onjampitiavana</p>
+            </div>
+               <footer>
+                <div className="mt-5">
+                <p className="text-center">© developed with 💗 by onjampitiavana</p>
                </div>
-            </div>
-            <div className="mt-5">
-
-            </div>
+               </footer>
         </div>
      );
 }
 
 export default Project;
+//lingo_sk_9wYzpnKuhSJRVRvTzTjxnCELuzcyhd-JTB5NW6-sfvE
+//name:portfolio
